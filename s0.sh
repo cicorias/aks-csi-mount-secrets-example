@@ -9,6 +9,7 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
     -keyout aks-ingress-tls.key \
     -subj "/CN=demo.azure.com/O=aks-ingress-tls"
 
+echo "hit enter to continue -- to skip password prompt"
 openssl pkcs12 -export -in aks-ingress-tls.crt -inkey aks-ingress-tls.key  -out $CERT_NAME.pfx
 # skip Password prompt
 
