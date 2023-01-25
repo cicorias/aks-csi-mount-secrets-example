@@ -75,8 +75,8 @@ kind: Pod
 metadata:
   name: quick-start
   namespace: ${SERVICE_ACCOUNT_NAMESPACE}
-  labels:
-    azure.workload.identity/use: "true"
+  # labels:
+  #   azure.workload.identity/use: "true"
 spec:
   serviceAccountName: ${SERVICE_ACCOUNT_NAME}
   containers:
