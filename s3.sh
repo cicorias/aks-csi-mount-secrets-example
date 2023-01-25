@@ -122,7 +122,7 @@ spec:
     kubernetes.io/os: linux
 EOF
 
-### --- create pod that "mounts" -- NOT WORKING --- ### 
+### --- create pod that "mounts" -- WORKING --- ### 
 cat <<EOF | kubectl apply -f -
 # This is a sample pod definition for using SecretProviderClass and the user-assigned identity to access your key vault
 kind: Pod
