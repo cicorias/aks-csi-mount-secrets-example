@@ -76,8 +76,8 @@ apiVersion: v1
 metadata:
   name: busybox-secrets-store-inline-workload-identity
   namespace: ${SERVICE_ACCOUNT_NAMESPACE}
-  # labels:
-  #   azure.workload.identity/use: "true"
+  labels:
+    azure.workload.identity/use: "true"
 spec:
   serviceAccountName: ${SERVICE_ACCOUNT_NAME}
   containers:
@@ -106,8 +106,8 @@ kind: Pod
 metadata:
   name: quick-start
   namespace: ${SERVICE_ACCOUNT_NAMESPACE}
-  # labels:
-  #   azure.workload.identity/use: "true"
+  labels:
+    azure.workload.identity/use: "true"
 spec:
   serviceAccountName: ${SERVICE_ACCOUNT_NAME}
   containers:
@@ -130,6 +130,8 @@ apiVersion: v1
 metadata:
   name: busybox-secrets-store-keys-workload-identity
   namespace: ${SERVICE_ACCOUNT_NAMESPACE}
+  labels:
+    azure.workload.identity/use: "true
 spec:
   serviceAccountName: ${SERVICE_ACCOUNT_NAME}
   containers:
